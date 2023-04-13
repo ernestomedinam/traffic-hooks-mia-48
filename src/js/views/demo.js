@@ -1,13 +1,15 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 
-import { Context } from "../store/appContext";
+// import { Context } from "../store/appContext";
 
 import "../../styles/demo.css";
+import { ActionsContext, StoreContext } from "../store/OurContext";
 
 export const Demo = () => {
-	const { store, actions } = useContext(Context);
-
+	// const { store, actions } = useContext(Context);
+	const store = useContext(StoreContext);
+	const actions = useContext(ActionsContext);
 	return (
 		<div className="container">
 			<ul className="list-group">
